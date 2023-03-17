@@ -64,4 +64,15 @@ x[t] = c + φ₁ * x[t-1] + φ₂ * x[t-2] + ... + φ_p * x[t-p] + ε[t]
         </pre>
     </section>
 </main>
+<p>自协方差（Autocovariance）：$$ \gamma_k = E[(y_t - \mu)(y_{t-k} - \mu)] $$</p>
+<p>自相关函数（ACF）：$$ \rho_k = \frac{\gamma_k}{\gamma_0} $$</p>
+<p>偏自相关函数（PACF）：$$ \phi_{kk} = \text{最小二乘估计}\ y_t \text{与}\ y_{t-k} \text{的回归系数，控制}\ y_{t-1}, \ldots, y_{t-k+1} $$</p>
+<p>单位根检验（如Augmented Dickey-Fuller检验）：$$ \Delta y_t = \alpha + \beta t + \gamma y_{t-1} + \delta_1 \Delta y_{t-1} + \cdots + \delta_{p-1} \Delta y_{t-p+1} + \epsilon_t $$</p>
+<p>简单移动平均（Simple Moving Average）：$$ SMA_t = \frac{1}{n} \sum_{i=0}^{n-1} y_{t-i} $$</p>
+<p>指数加权移动平均（Exponential Weighted Moving Average）：$$ EWMA_t = \alpha y_t + (1 - \alpha)EWMA_{t-1},\ 0 \leq \alpha \leq 1 $$</p>
+<p>随机游走（Random Walk）：$$ y_t = y_{t-1} + \epsilon_t $$</p>
+<p>季节性分解（Seasonal Decomposition）：$$ y_t = T_t + S_t + R_t $$</p>
+<p>自回归模型（Autoregressive Model, AR(p)）：$$ y_t = \alpha + \beta_1 y_{t-1} + \beta_2 y_{t-2} + \cdots + \beta_p y_{t-p} + \epsilon_t $$</p>
+<p>移动平均模型（Moving Average Model, MA(q)）：$$ y_t = \alpha + \epsilon_t + \theta_1 \epsilon_{t-1} + \theta_2 \epsilon_{t-2} + \cdots + \theta_q \epsilon_{t-q} $$</p>
+<p>ARIMA模型（Autoregressive Integrated Moving Average Model, ARIMA(p, d, q)）：$$ \Delta^d y_t = \alpha + \beta_1 \Delta^d y_{t-1} + \cdots + \beta_p \Delta^d y
 
